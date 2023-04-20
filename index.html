@@ -1,469 +1,191 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-04-20 20:41:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/20/hello1/" class="article-date">
-  <time class="dt-published" datetime="2023-04-20T07:07:23.000Z" itemprop="datePublished">2023-04-20</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/20/hello1/">hello1</a>
-    </h1>
-  
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/20/hello1/" title="hello1">hello1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-20T07:07:23.000Z" title="Created 2023-04-20 15:07:23">2023-04-20</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/20/hello/" title="hello">hello</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-20T07:05:16.000Z" title="Created 2023-04-20 15:05:16">2023-04-20</time></span></div><div class="content">一、JDBC简介①JDBC概念
+JDBC就是使用Java语言操作关系型数据库的一套API。
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/20/hello1/" data-id="clgotgsfm000250vabmt42201" data-title="hello1" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+②JDBC本质
+SUN公司定义的一套操作所有关系型数据库的规则，即接口。
+各个数据库厂商去实现这套接口，提供数据库驱动jar包。
+我们可以使用这套(JDBC)编程，真正执行的代码是驱动jar包中的实现类。
 
+③JDBC好处
+各数据库厂商使用相同的接口，Java代码不需要针对不同数据库分别开发。
+可随时替换底层数据库，访问数据库的Java代码基本不变。
 
-
-  
-    <article id="post-hello" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/20/hello/" class="article-date">
-  <time class="dt-published" datetime="2023-04-20T07:05:16.000Z" itemprop="datePublished">2023-04-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/20/hello/">hello</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="一、JDBC简介"><a href="#一、JDBC简介" class="headerlink" title="一、JDBC简介"></a>一、JDBC简介</h3><h4 id="①JDBC概念"><a href="#①JDBC概念" class="headerlink" title="①JDBC概念"></a>①JDBC概念</h4><ul>
-<li>JDBC就是使用Java语言操作关系型数据库的一套API。</li>
-</ul>
-<h4 id="②JDBC本质"><a href="#②JDBC本质" class="headerlink" title="②JDBC本质"></a>②JDBC本质</h4><ul>
-<li>SUN公司定义的一套操作所有关系型数据库的规则，即接口。</li>
-<li>各个数据库厂商去实现这套接口，提供数据库驱动jar包。</li>
-<li>我们可以使用这套(JDBC)编程，真正执行的代码是驱动jar包中的实现类。</li>
-</ul>
-<h4 id="③JDBC好处"><a href="#③JDBC好处" class="headerlink" title="③JDBC好处"></a>③JDBC好处</h4><ul>
-<li>各数据库厂商使用相同的接口，Java代码不需要针对不同数据库分别开发。</li>
-<li>可随时替换底层数据库，访问数据库的Java代码基本不变。</li>
-</ul>
-<h4 id="④补充"><a href="#④补充" class="headerlink" title="④补充"></a>④补充</h4><p>​	当我们需要使用不同的数据库时，我们只需要导入不同的数据库驱动jar包即可。</p>
-<img src="C:\Users\橙子\AppData\Roaming\Typora\typora-user-images\image-20220921111957763.png" alt="image-20220921111957763" style="zoom:50%;" />
-
-
-
-<hr>
-<h3 id="二、JDBC快速入门"><a href="#二、JDBC快速入门" class="headerlink" title="二、JDBC快速入门"></a>二、JDBC快速入门</h3><p>​	通过JDBC来连接数据库。</p>
-<h4 id="①实现步骤"><a href="#①实现步骤" class="headerlink" title="①实现步骤"></a>①实现步骤</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//0.导入驱动jar包</span></span><br><span class="line">mysql-connector-java-<span class="number">5.1</span><span class="number">.34</span>.jar</span><br><span class="line"><span class="comment">//1.注册驱动</span></span><br><span class="line">Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);<span class="comment">//&quot;com.mysql.jdbc.Driver&quot;是固定的</span></span><br><span class="line"><span class="comment">//2.获取连接</span></span><br><span class="line"><span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> DriverManager.getConnection(url,username,password);</span><br><span class="line"><span class="comment">//3.定义SQL语句</span></span><br><span class="line"><span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;update...&quot;</span>;</span><br><span class="line"><span class="comment">//4.获取执行SQL对象</span></span><br><span class="line"><span class="type">Statement</span> <span class="variable">stmt</span> <span class="operator">=</span> conn.createStatement();</span><br><span class="line"><span class="comment">//5.执行SQL</span></span><br><span class="line">stmt.execuleUpdate(sql);<span class="comment">//返回受影响的行数，</span></span><br><span class="line"><span class="comment">//6.处理返回结果</span></span><br><span class="line"><span class="comment">//7.释放资源 </span></span><br><span class="line">stmt.close();</span><br><span class="line">conn.close();</span><br><span class="line"><span class="comment">//如果使用到了如下类的对象，就把这些对象的资源释放掉</span></span><br><span class="line"><span class="comment">//Connection、Statement、PreparedStatement、ResultSet</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="②实现步骤的说明"><a href="#②实现步骤的说明" class="headerlink" title="②实现步骤的说明"></a>②实现步骤的说明</h4><ul>
-<li>注册驱动：说明接下来使用的是哪个驱动。即说明接下来使用的是哪个数据库提供的JDBC接口实现类。</li>
-<li>getConnection(url,username,password)：<ul>
-<li>url：jdbc:mysql:&#x2F;&#x2F;数据库管理系统所在主机的地址(或域名)：3306&#x2F;连接的是数据库管理系统下的哪个数据库。例子：jdbc:mysql:&#x2F;&#x2F;127.0.0.1:3306&#x2F;db1。</li>
-<li>username、password：登录数据库管理系统时的用户名和密码。</li>
-</ul>
-</li>
-<li>执行SQL：将SQL语句发送给数据库，让数据库处理这些SQL语句。</li>
-</ul>
-<h4 id="③JDBC-API详解"><a href="#③JDBC-API详解" class="headerlink" title="③JDBC  API详解"></a>③JDBC  API详解</h4><h5 id="A-DriverManager"><a href="#A-DriverManager" class="headerlink" title="A.DriverManager"></a>A.DriverManager</h5><h6 id="①概述"><a href="#①概述" class="headerlink" title="①概述"></a>①概述</h6><p>​	DriverManager属于工具类，该类的两个主要功能是：注册驱动、获取数据库连接。</p>
-<h6 id="②注册驱动"><a href="#②注册驱动" class="headerlink" title="②注册驱动"></a>②注册驱动</h6><ul>
-<li><p>实现原理：</p>
-<p>  ​		按照JDBC中的实现步骤，我们用Class.forName(“com.mysql.jdbc.Driver”)来注册驱动。该代码底层实现原理是：</p>
-<p>  ​		Driver是一个类，该类中有一个静态代码块，静态代码块中调用了DriverManager类中的静态方法registerDriver()，该方法就是用来注册驱动的。</p>
-<p>  ​		所以当通过反射来加载Driver类时，同时也执行了Driver类中的静态代码块，也就调用了registerDriver()来注册驱动了。</p>
-</li>
-<li><p>提示：</p>
-<p>  ​	如果使用的是MySQL 5之后的驱动jar包，那么就可以省略注册驱动的步骤。</p>
-</li>
-</ul>
-<h6 id="③获取连接"><a href="#③获取连接" class="headerlink" title="③获取连接"></a>③获取连接</h6><p>​	调用DriverManager类中的静态方法getConnection(String url,String user,String password)，该方法返回的是一个Connection类的对象。</p>
-<p>​	<strong>细节</strong>：</p>
-<ul>
-<li><p>如果连接的是本机MySQL服务器(即地址为127.0.0.1)，并且MySQL服务默认端口是3306，则url可以简写为：jdbc:mysql:&#x2F;&#x2F;&#x2F;数据库名称</p>
-</li>
-<li><p>当我们执行该语句后，运行结果中会显示一个警告：建议以安全的方式连接数据库(SSL)，但这种连接方式会使性能降低，一般不使用。为了不出现这个警告，我们可以在url的最后面加上：?useSSL&#x3D; fasle即可。</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://127.0.0.1:3306/db1?useSSL=false&quot;</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h5 id="B-Connection"><a href="#B-Connection" class="headerlink" title="B.Connection"></a>B.Connection</h5><h6 id="①作用"><a href="#①作用" class="headerlink" title="①作用"></a>①作用</h6><p>​	获取执行SQL的对象、管理事务。</p>
-<h6 id="②获取执行SQL对象"><a href="#②获取执行SQL对象" class="headerlink" title="②获取执行SQL对象"></a>②获取执行SQL对象</h6><ol>
-<li>普通执行SQL对象</li>
-</ol>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Statement <span class="title function_">createStatement</span><span class="params">()</span></span><br><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>预编译SQL的执行SQL对象：防止SQL注入</li>
-</ol>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PreparedStatement <span class="title function_">prepareStatement</span><span class="params">(sql)</span></span><br><span class="line"><span class="comment">//关闭资源时，记得把PreparedStatement对象也关闭掉</span></span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><p>执行存储过程的对象（少用，了解即可）</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CallableStatement <span class="title function_">prepareCall</span><span class="params">(sql)</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h6 id="③事务管理"><a href="#③事务管理" class="headerlink" title="③事务管理"></a>③事务管理</h6><ul>
-<li><p>概述：</p>
-<p>  <img src="/imgs/image-20220921154856156.png" alt="image-20220921154856156"></p>
-<p>  Conncetion中也有三个方法来管理事务，它们分别对应着MySQL中的事务管理的三个步骤。</p>
-<p>  <img src="/imgs/image-20220921155103081.png" alt="image-20220921155103081"></p>
-</li>
-<li><p>使用：</p>
-<p>  开启事务的代码写在执行SQL之前，提交事务的代码写在“处理事务返回的结果”的后面，然后将开启事务到提交事务之间的代码用try包起来，在catch里写回滚事务的代码。</p>
-</li>
-</ul>
-<h5 id="C-Statement"><a href="#C-Statement" class="headerlink" title="C.Statement"></a>C.Statement</h5><h6 id="①作用-1"><a href="#①作用-1" class="headerlink" title="①作用"></a>①作用</h6><p>​	执行SQL语句</p>
-<h6 id="②相关方法"><a href="#②相关方法" class="headerlink" title="②相关方法"></a>②相关方法</h6><p>1. </p>
-<pre><code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">executeUpdate</span><span class="params">(sql)</span></span><br><span class="line"><span class="comment">//该方法执行的是DML、DDL语句</span></span><br><span class="line"><span class="comment">/*返回值：</span></span><br><span class="line"><span class="comment">①DML语句受影响的行数，我们可以根据返回的行数来判断，该SQL是否执行成功</span></span><br><span class="line"><span class="comment">②DDL语句执行后，执行成功也可能返回0，如：创建数据库或创建表执行成功了，受影响行数也为0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-</code></pre>
-<ol start="2">
-<li><pre><code class="java"> ResultSet executeQuery(sql)
- //该方法执行的是DQL语句
- //返回值：ResultSet结果集对象
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	注意：关闭资源时，记得把ResultSet对象资源也得关闭。</span><br><span class="line"></span><br><span class="line">##### D.ResultSet</span><br><span class="line"></span><br><span class="line">###### 	①概述</span><br><span class="line"></span><br><span class="line">​	ResultSet中存储了通过executeQuery(sql)查询得到的结果。(说明：这里的sql特指DQL语句)</span><br><span class="line"></span><br><span class="line">​	由于DQL语句查询得到的结果为：一个数据 或 一行数据 或 一张表</span><br><span class="line"></span><br><span class="line">​	所以实际上，ResultSet中存储的是一个数据 或 一行数据 或 一张表。</span><br><span class="line"></span><br><span class="line">###### 	②获取查询结果</span><br><span class="line"></span><br><span class="line">- boolean next()</span><br><span class="line">	- 作用：①将光标从当前位置向下移动一行。(光标的初始位置为：表头) ②判断当前行是否为有效行。</span><br><span class="line">	- 返回值：</span><br><span class="line">		- true：有效行，代表当前行有数据。</span><br><span class="line">		- false：无效行，代表当前行没有数据。</span><br><span class="line">- xxx getXxx(参数)</span><br><span class="line">	- 作用：获取数据</span><br><span class="line">	- Xxx：数据类型；如：int getInt(参数)</span><br><span class="line">	- 参数：二选一</span><br><span class="line">		- ①int：列的编号，从1开始。</span><br><span class="line">		- ②String：列的名称</span><br><span class="line"></span><br><span class="line">###### 	③练习</span><br><span class="line"></span><br><span class="line">​	查询account账户表数据，封装为Account对象中，并存储到ArrayList集合中。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">##### E.PreparedStatement</span><br><span class="line"></span><br><span class="line">###### 	①概述</span><br><span class="line"></span><br><span class="line">​	PreparedStatement是一个接口，其继承Statement类。</span><br><span class="line"></span><br><span class="line">​	其作用：执行SQL语句，并且能够预防SQL注入。</span><br><span class="line"></span><br><span class="line">###### 	②SQL注入</span><br><span class="line"></span><br><span class="line">​	SQL注入是通过操作输入来修改事先定义好的SQL语句，用以达到执行代码对服务器进行攻击的方法。</span><br><span class="line"></span><br><span class="line">​	如：在登录输入密码时，写入一段SQL代码。</span><br><span class="line"></span><br><span class="line">```mysql</span><br><span class="line">#如现登录的用户名为张三，其密码为123</span><br><span class="line">SELECT * FROM user_login WHERE name = &#x27;张三&#x27; AND password = &#x27;123&#x27;;-- 如果查询到数据，就代表该用户存在且密码正确，登录成功</span><br><span class="line"></span><br><span class="line">#如果我在输入密码时写了作用的SQL语句：&#x27; or &#x27;1&#x27; = &#x27;1&#x27;</span><br><span class="line">SELECT * FROM user_login WHERE name = &#x27;张三&#x27; AND password = &#x27;&#x27; or &#x27;1&#x27; = &#x27;1&#x27;;</span><br><span class="line">-- 此时用户输入的密码就改变了原来查询语句的面貌，导致WHERE后面的条件永远成立，select就能查询到数据，代表着登录成功了。这就是SQL注入。</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ol>
-<p>​	</p>
-<h6 id="③解决SQL注入"><a href="#③解决SQL注入" class="headerlink" title="③解决SQL注入"></a>③解决SQL注入</h6><p>​	<strong>实现步骤</strong>：</p>
-<ol>
-<li><p>获取PreparedStatement对象，用Connection类的对象去调用prepareStatement(sql)方法</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">PreparedStatement</span> <span class="variable">pstmt</span> <span class="operator">=</span> con.prepareStatement(sql);</span><br></pre></td></tr></table></figure>
-
-<p> 注意：sql语句中的参数值，使用 “ ? ” 占位符代替，如：</p>
-<p> sql可以为增删改查操作。</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;select * from user where username = ? and password = ?&quot;</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置参数。通过PreparedStatement类的对象去调用setXxx(参数1,参数2)去给 “ ? ”赋值。</p>
-<p> 说明：</p>
-<ul>
-<li>Xxx：数据类型；如：setInt(参数1，参数2)</li>
-<li>参数：<ul>
-<li>参数1：? 的位置。第一个?的位置为1。</li>
-<li>参数2：? 的值。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>执行SQL。通过PreparedStatement类的对象调用execuleUpdate()或executeQuery()来执行SQL语句。注意：不用再向这两个方法传递SQL语句。</p>
-</li>
-</ol>
-<h6 id="④解决SQL注入的原理"><a href="#④解决SQL注入的原理" class="headerlink" title="④解决SQL注入的原理"></a>④解决SQL注入的原理</h6><p>​	当我们通过setXxx方法来设置占位符 “?” 的值时，会对设置的值进行校验，如果其中涉及到了一些SQL关键字或单引号等会对其进行转移操作，即将这些变成字符串。这样就不会产生SQL注入了。</p>
-<h6 id="⑤PreparedStatement原理"><a href="#⑤PreparedStatement原理" class="headerlink" title="⑤PreparedStatement原理"></a>⑤PreparedStatement原理</h6><ul>
-<li><strong>PreparedStatement的好处</strong><ol>
-<li>预编译SQL，性能提高。</li>
-<li>防止SQL注入：将敏感字符进行转义。</li>
-<li>PreparedStatement<strong>预编译功能默认是关闭的</strong>，<strong>需要我们手动开启</strong>，在获取数据库连接时，在url后面加上“<strong>useServerPrepStmts &#x3D; true</strong>”，<strong>并且在这段代码前加上 &amp; 和前面的内容连起来</strong>。</li>
-</ol>
-</li>
-<li><strong>PreparedStatement原理</strong><ol>
-<li>在获取PreparedStatement对象时，将SQL语句发送给MySQL服务器进行检查，编译(这些步骤很耗时)。</li>
-<li>执行SQL时就不用再进行检查和预编译了，速度更快。</li>
-<li>如果SQL语句的模板一样，则只需要进行一次检查和预编译。</li>
-</ol>
-</li>
-<li><strong>PreparedStatement比以普通的方式执行SQL快在哪里？</strong><ol>
-<li>普通的方式进行SQL：其在执行SQL时才将SQL语句发送给数据库进行检查和编译，最后才真正执行。比预编译耗时。</li>
-<li>普通的方式进行SQL：需要对每一条SQL语句进行检查和编译，预编译的话，只要模板相同就只执行一次检查和编译，节省了时间。</li>
-</ol>
-</li>
-</ul>
-<hr>
-<h4 id="④数据库连接池"><a href="#④数据库连接池" class="headerlink" title="④数据库连接池"></a>④数据库连接池</h4><h5 id="A-概述"><a href="#A-概述" class="headerlink" title="A.概述"></a>A.概述</h5><ol>
-<li>数据库连接池：是个容器，负责分配、管理数据库连接。</li>
-<li>它允许应用程序重复使用一个现有的数据库连接，而不是重新建立一个。—&gt; 资源复用、提高响应效率</li>
-<li>释放空间时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。—&gt; 避免数据库连接遗漏</li>
-</ol>
-<p>​	<strong>好处</strong>：</p>
-<ul>
-<li>资源复用</li>
-<li>提高响应效率</li>
-<li>避免数据库连接遗漏</li>
-</ul>
-<p>​	</p>
-<h5 id="B-数据库连接池实现"><a href="#B-数据库连接池实现" class="headerlink" title="B.数据库连接池实现"></a>B.数据库连接池实现</h5><h6 id="①概述-1"><a href="#①概述-1" class="headerlink" title="①概述"></a>①概述</h6><ol>
-<li><p>官方(SUN公司)提供了数据库连接池的标准接口DataSource，该接口由第三方组织实现。</p>
-<ul>
-<li><p>该接口的功能是：获取数据库连接，该接口中有一个方法：</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection getConnection()</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>常见的数据库连接池：DBCP、C3P0、Druid</p>
-<ul>
-<li>Druid：是阿里巴巴开源的数据库连接池项目。其功能强大，性能优秀。</li>
-</ul>
-</li>
-</ol>
-<h6 id="②Druid使用步骤"><a href="#②Druid使用步骤" class="headerlink" title="②Druid使用步骤"></a>②Druid使用步骤</h6><ol>
-<li><p>导入jar包：druid-1.1.12.jar</p>
-</li>
-<li><p>定义配置文件，文件的后缀为properties。</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">driverClassName = com.mysql.jdbc.Driver<span class="comment">//注册数据库驱动，使用哪个数据库就注册哪个数据库驱动</span></span><br><span class="line">url = jdbc:mysql:<span class="comment">//数据库管理系统所在主机的地址(或域名)：3306/连接的是数据库管理系统下的哪个数据库。例子：jdbc:mysql://127.0.0.1:3306/db1。</span></span><br><span class="line">username = 登录数据库的用户</span><br><span class="line">password = 密码</span><br><span class="line">initialSize = <span class="number">5</span> <span class="comment">//初始化连接数量</span></span><br><span class="line">maxActive = <span class="number">10</span> <span class="comment">//最大连接数</span></span><br><span class="line">maxWait = <span class="number">3000</span> <span class="comment">//最大等待时间，单位为毫秒</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//还有其它参数可以设置</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>加载配置文件</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Properties</span> <span class="variable">prop</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();<span class="comment">//创建配置文件对象</span></span><br><span class="line">prop.load(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;配置文件的路径&quot;</span>));<span class="comment">//加载配置文件</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取数据库连接池对象</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">DataSource</span> <span class="variable">ds</span> <span class="operator">=</span> DruidDataSourcrFactory.createDataSourcr(prop);<span class="comment">//该方法会抛异常</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取数据库连接</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Connection</span> <span class="variable">con</span> <span class="operator">=</span> ds.getConnection();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取连接之后，就定义SQL，获取执行SQL的对象，执行SQL，释放资源。</p>
-</li>
-</ol>
-<p>​	</p>
-<h3 id="三、练习"><a href="#三、练习" class="headerlink" title="三、练习"></a>三、练习</h3><p>​	添加数据时，id值不需要获取，让id自增长即可。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/20/hello/" data-id="clgotgsfj000150vadhp217h4" data-title="hello" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/19/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-04-19T13:09:27.398Z" itemprop="datePublished">2023-04-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/19/hello-world/" data-id="clgotgsfe000050vad85b29hv" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/04/20/hello1/">hello1</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/20/hello/">hello</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/19/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
+④补充​	当我们需要使用不同的数据库时，我们只需要导入不同的数据库驱动jar包即可。
 
 
 
 
 
-  </div>
-</body>
-</html>
+二、JDBC快速入门​	通过JDBC来连接数据库。
+①实现步骤123456789101112131415161718//0.导入驱动jar包mysql-connector-java-5.1.34.jar//1.注册驱动Class.forName(&quot;com.mysql.jdbc.Driver&quot;);//&quot;com.mysql.jdbc.Driver&quot;是固定的//2.获取连接Connection conn = Driv ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/19/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-19T13:09:27.398Z" title="Created 2023-04-19 21:09:27">2023-04-19</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/20/hello1/" title="hello1">hello1</a><time datetime="2023-04-20T07:07:23.000Z" title="Created 2023-04-20 15:07:23">2023-04-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/20/hello/" title="hello">hello</a><time datetime="2023-04-20T07:05:16.000Z" title="Created 2023-04-20 15:05:16">2023-04-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/19/hello-world/" title="Hello World">Hello World</a><time datetime="2023-04-19T13:09:27.398Z" title="Created 2023-04-19 21:09:27">2023-04-19</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-04-20T12:41:19.936Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
