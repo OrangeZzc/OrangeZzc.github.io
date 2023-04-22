@@ -5748,3 +5748,26 @@ blockquote.pullquote.right {
 .read-mode #article-container .note .note-icon {
   color: var(--font-color);
 }
+#aside-content>.card-widget {
+  background: rgba(255,255,255,0.9);
+}
+​,
+#aside-content>.sticky_layout>.card-widget {
+  background: rgba(255,255,255,0.9);
+}
+/*修改文章页面的背景样式，设置为透明*/
+.layout>#post {
+  background: rgba(255,255,255,0.9);
+}
+/*修改分类页面背景为透明*/
+.layout>#categories {
+  background: rgba(255,255,255,0.9);
+}
+​,
+.layout>#archive {
+  background: rgba(255,255,255,0.9);
+}
+/*修改标签页面背景为透明*/
+.layout>#tags {
+  background: rgba(255,255,255,0.9);
+}
